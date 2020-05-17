@@ -1,0 +1,17 @@
+.globl add
+add:	
+/*
+pushq %rbp
+movq %rsp,%rbp
+pushq %rdi
+movq -8(%rbp),%rbx     //  /**/里面的为第一种方法  后面的是第二种
+addq $1,%rbx
+movq %rbx,%rax
+movq %rbp,%rsp
+popq %rbp	
+ret
+*/
+
+addq $2,%rdi
+movq %rdi,%rax
+ret
