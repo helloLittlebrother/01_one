@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(void)
+{
+        int a=100;
+	int b= 200;
+	int s;
+        __asm__ __volatile__
+	(
+		"addl  %%ebx,%%eax"
+                :"=a"(s)
+                :"a"(a), "b"(b)
+        );
+        printf("%d\n",s);
+        return 0;
+}

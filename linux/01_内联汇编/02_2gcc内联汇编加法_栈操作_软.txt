@@ -1,0 +1,53 @@
+#include<stdio.h>
+struct zhan
+{
+	int top;
+	int psh;
+	int pp[1024];
+}test;
+int i=0;
+void jin(int a)
+{
+	if(test.top>0)
+	{
+		
+
+		test.pp[i]=test.psh;
+		test.psh=test.top;
+		test.top--;
+		i++;
+		test.pp[i]=a;
+		test.top--;
+		i++;
+		printf("cheng gong ru\n");
+	}else printf("shi bai ru\n");
+}
+void chu()
+{
+	if(test.top<=1024)
+	{
+		i--;
+		int s;
+		test.top=test.psh;
+		//test.top++;
+		s=test.pp[i];
+		test.pp[i]=0;
+		i--;
+		test.psh=test.pp[i];
+		test.pp[i]=0;
+		//test.top++;
+		//i--;
+		printf("cheng gong chu  %d\n",s);
+	}else  printf("shi bai chu\n");			
+}
+int main()
+{
+	test.top=1024;
+	test.psh=1024;
+	int a=100,b=200;
+	jin(a);
+	jin(b);
+	chu();
+	chu();
+	return 0;
+}
