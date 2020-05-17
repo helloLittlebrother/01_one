@@ -1,0 +1,30 @@
+#include<stdio.h>
+int palindrome(char *string){
+	char *n,*m;
+	int i,s,t=0;
+	s=strlen(string);
+	n=string;
+	m=&string[s-1];
+	for(i=0;i<s/2;i++){
+		if(*(n+i)==*(m-i))
+			t++;
+	}
+	if(t==s/2)
+		return 1;
+	else
+		return 0;
+}
+int main(){
+	char a[10];
+	char *b;
+	int i,j,n;
+	b=a;
+	printf("请输入1-10\n");
+	scanf("%d",&j);
+	printf("请输入%d个数\n",j);
+	for(i=0;i<j;i++)
+		scanf("%d",&a[i]);
+	n=palindrome(b);
+	printf("%d\n",n);
+	return 0;
+}

@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main(){
+	int i,j,s1=0,s2=0,s3=0,max=0;
+	double ss1,ss2,ss3;
+	int hao;
+	char name[10];
+	int ying;
+	int yu;
+	int shu;
+	seruct student{
+		int hao;
+		char name[10];
+		int ying;
+		int yu;
+		int shu;
+	}a[10];
+	for(i=0;i<10;i++)
+		scanf("%d%s%d%d%d",&a[i].hao,&a[i].name,&a[i].ying,&a[i].yu,&a[i].shu);
+	for(i=0;i<10;i++)
+		s1+=a[i].ying;
+	ss1=(double)s1/3;
+	for(i=0;i<10;i++)
+		s2+=a[i].yu;
+	ss2=(double)s2/3;
+	for(i=0;i<10;i++)
+		s3+=a[i].shu;
+	ss3=(double)s3/3;
+	printf("%f %f %f\n",ss1,ss2,ss3);
+	max=a[0].ying+a[0].shu+a[0].yu;
+	for(i=1;i<10;i++){
+		if(a[i].ying+a[i].shu+a[i].yu){
+			max=a[i].ying+a[i].shu+a[i].yu;
+			j=i'
+		}
+	}
+	printf("%d%s%d%d%f\n",a[j].hao,a[j].name,a[j].ying,a[j].yu,a[j].shu,(a[j].ying+a[j].shu+a[j].yu)/3);
+	return 0;
+	
+}

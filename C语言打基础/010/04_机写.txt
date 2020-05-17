@@ -1,0 +1,44 @@
+#include<stdio.h>
+void string_in(char *str1,char *str2){
+	int i,j,n;
+	int *a,*b;
+	a=str1;
+	b=str2;
+	if(strlen(str1)>strlen(str2)){
+		for(i=0;i<strlen(str1);i++){
+			if(str1[i]==str2[0]){
+				n=0;
+				for(j=0;j<strlen(str2);j++){
+					if(*(a+i+j)==(b+j)){
+						n++;
+						printf("%d",n);
+					}
+				}
+				if(n==strlen(str2)){
+					printf("1\b");
+					break;
+				}
+			}
+		}
+	}
+}
+int main(){
+	int i,j,q,w,s;
+	char *n,*m;
+	cahr a[10],b[10];
+	n=a;
+	m=b;
+	printf("请输入1-10\n");
+	scanf("%d",&j);
+	printf("请输入%d个数\n",j);
+	for(i=0;i<j;i++)
+		scanf("%d",&a[i]);
+	printf("请输入1-10\n");
+	scanf("%d",&q);
+	printf("请输入%d个数\n",q);
+	for(w=0;w<q;w++)
+		scanf("%d",&b[w]);
+	string_in(n,m);
+	printf("%d\b",s);
+	return 0;
+}

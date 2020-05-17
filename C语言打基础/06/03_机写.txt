@@ -1,0 +1,30 @@
+#include<stdio.h>
+long yi(int m){
+	long a;
+	if(m==0)
+	return a=(long)1;
+	else return a=(long)m*yi(m-1);
+}
+long er(int n){
+	long b;
+	if(n==0) return b=(long)1;
+	else return b=(long)n*er(n-1);
+}
+long san(int p){
+	long c;
+	if(p==0) return c=(long)1;
+	else return c=(long)p*san(p-1);
+}
+
+int main(){
+	int m,n,p;
+	long a,b,c,d;
+	p=m-n;
+	scanf("%d%d",&m,&n);
+	a=yi(m);
+	b=er(n);
+	c=san(p);
+	d=(long)a/(b*c);
+	printf("%d\n",d);
+	return 0;
+}

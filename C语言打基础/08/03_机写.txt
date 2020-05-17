@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+void string_cut(char a[],char b){
+	int i;
+	for(i=0;i<strlen(a);i++){
+		if(a[1]!=b)
+			printf("%c",a[i]);
+	}
+}
+int main(){
+	char a[10];
+	char b;
+	scanf("%c",&b);
+	scanf("%s",&a);
+	striing_cut(a,b);
+	return 0;
+}

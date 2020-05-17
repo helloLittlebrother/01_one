@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+	struct qq{
+		int year;
+		int month;
+		int date;
+	}a;
+	int s;
+	scanf("%d%d%d",&a.year,&a.month,&a.date);
+	if(((0==a.year%4)&&(0!=a.year%100))||(0==a.year%400)){
+		if(a.month<=7)
+			s=(a.month-1)*30+a.month%2*a.month+a.date;
+		else
+			s=(a.month-1)*30+a.month%2*a.month+1+a.date;
+	}else{
+		if(a.month<=7)
+			s=(a.month-1)*30+a.month%2*a.month-1+a.date;
+		else
+			s=(a.month-1)*30+a.month%2*a.month+a.date;
+	}
+	printf("%d\n",s);
+	return 0;
+}

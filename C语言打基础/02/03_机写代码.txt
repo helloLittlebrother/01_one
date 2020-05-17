@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+	int a=3,b=2;
+	double c=2.5,d;
+	d=(float)(a+b)/3+(int)c;
+	printf("%f\n",d);
+	return 0;
+}

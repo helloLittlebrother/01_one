@@ -1,0 +1,98 @@
+#include<stdio.h>
+#define N 3
+void aa1(char b[3][10],int c[3][3],int e[],int n){
+	int i,j;
+	printf("请输入姓名学号\n");
+	for(i=0;i<n;i++){
+		scanf("%s",b[i]);
+		scanf("%d",&e[i]);
+	}
+	printf("请输入对应的语文、数学、英语成绩\n");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++)
+			scanf("%d",&c[i][k]);
+	}
+}
+void aa2(char b[3][10],int c[3][3],float d[3],int n,int m){
+	int i,j;
+	char a[10];
+	printf("请输入一个学生的姓名\n");
+	scanf("%s",&a);
+	for(i=0;i<n;i++){
+		if(strcmp(a,b[i])){
+
+		}else{
+			printf("%s ",a);
+			for(j=0;j<m;j++)
+				printf("%d \n",c[i][k]);
+			aver(c,d,n,i);
+		}
+	}
+}
+void aa3(char b[3][10],int c[3][3],float d[3],int e[],int n,int m){
+	int i,j;
+	int a;
+	printf("请输入一个学号\n");
+	scanf("%d",&a);
+	for(i=0;i<n;i++){
+		if(a==e[i]){
+			printf("%s ",b[i]);
+			printf("%d ",a);
+			for(j=0;j<m;j++)
+				printf("%d \n",c[i][j]);
+			aver(c,d,n,i);
+		}
+	}
+}
+void aa4(char b[3][10],int c[3][3],float d[3],int e[],int n,int m){
+	int i,j;
+	int a;
+	printf("请输入一个学号\n");
+	scanf("%d",&a);
+	for(i=0;i<n;i++){
+		if(a==e[i]){
+			printf("%d ",a);
+			for(j=0;j<m;j++)
+				printf("%d \n",c[i][j]);
+			aver(c,d,n,i);
+		}
+	}
+}
+void aver(int c[3][3],float d[3],int n,int m){
+	int i,j,s;
+	for(i=0;i<n;i++){
+		s=0;
+		for(j=0;j<n;j++)
+			s+=c[i][j];
+		d[i]=s/3.0;
+	}
+	printf("%f\n",d[m]);
+}
+int main(){
+	int a;
+	char b[3][10];
+	int c[3][3];
+	float d[3];
+	int e[3];
+	printf("			主菜单			\n");
+	printf("================================================\n");
+	printf("		1.输入学生成绩			\n");
+	printf("		2.按姓名查询学生成绩		\n");
+	printf("		3.按学号查询学生成绩		\n");
+	printf("		4.打印输出成绩			\n");
+	printf("		0.退出系统			\n");
+	printf("================================================\n");
+	do{
+		printf("请选择0-4\n");
+		scanf("%d",&a);
+		switch(a){
+			case 1:aa1(b,c,e,N);break;
+			case 2:aa2(b,c,d,N,3);break;
+			case 3:aa3(b,c,d,e,N,3);
+			case 4:aa4(b,c,d,e,N,3);
+			case 0:printf("谢谢使用\n");break;
+			default:printf("输入错误，请重新输入\n");
+		}
+	}while(a!=0);
+	return 0;
+}

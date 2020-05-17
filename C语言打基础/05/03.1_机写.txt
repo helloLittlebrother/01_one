@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main(){
+	int year1,year2,month1,month2,date1,date2,i,n=0;
+	scanf("%d%d%d%d%d%d",&year1,&year2,&month1,&month2,&date1,&date2);
+	return 0;
+}

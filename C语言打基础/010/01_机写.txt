@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+	int a,b,c;
+	int *A,*B,*C;
+	A=&a;
+	B=&b;
+	C=&c;
+	scanf("%d%d%d",A,B,C);
+	if(*A>=*B){
+		if(*B>=*C)
+			printf("%d %d %d\n",*A,*B,*C);
+		else{
+			if(*A>=*C)
+				printf("%d %d %d\n",*B,*C,*A);
+			else 
+				printf("%d %d %d\n",*B,*A,*C);
+		}
+	}else{
+		if(*A>=*C)
+			printf("%d %d %d\n",*C,*A,*B);
+		else{
+			if(*B>=*C)
+				printf("%d %d\n",*A,*C,*B);
+			else printf("%d %d %d\n",*A,*B,*C);
+		}
+	}
+	return 0;
+}

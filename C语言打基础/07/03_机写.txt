@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+	int i,j,s=0,a[2][3]={1,2,3,4,5,6};
+	int b[3][2]={1,2,3,4,5,6};
+	for(i=0;i<2;i++){
+		for(j=0;j<3;j++){
+			s+=a[i][j]*b[j][i];
+			if(i==0)
+				s+=a[i][j]*b[j][1];
+			else
+				s+=a[1][j]*b[j][0];
+		}
+	}
+	printf("%d\n",s);
+	return 0;
+}

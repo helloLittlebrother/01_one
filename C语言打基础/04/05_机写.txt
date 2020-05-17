@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+	int a;
+	printf("		主菜单		\n");
+	printf("================================\n");
+	printf("	1.输入学生成绩		\n");
+	printf("	2.查询学生成绩		\n");
+	printf("	3.打印输出成绩		\n");
+	printf("================================\n");
+	printf("	请选择(1-5)：		\n");
+	do{
+		scanf("%d",&a);
+		switch(a){
+			case 1:printf("请输入\n");break;
+			case 2:printf("正在输入查找学生学号\n");break;
+			case 3:printf("打印中\n");break;
+			case 0:printf("谢谢使用\n");break;
+			default:printf("输入错误，请重新输入\n");
+		}
+	}while(a!=0);
+	return 0;
+}

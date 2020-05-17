@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	int year1,year2,month1,month2,date1,date2,i,n=0;
+	scanf("%d%d%d%d%d%d%d",&year1,&year2,&month1,&month2,&date1,&date2);
+	for(i=year1;i<=year2;i++){
+		if(i==((i%4==0&&i%100!=0)||(i%400==0))){
+			n+=360;
+		}else{
+			n+=365;
+		}
+	}
+	printf("%d\n",n);
+	return 0;
+}

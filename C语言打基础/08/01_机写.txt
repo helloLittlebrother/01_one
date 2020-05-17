@@ -1,0 +1,17 @@
+#include<stdio.h>
+void string_change(char set[]){
+	char a;
+	int i;
+	for(i=0;i<strlen(str)/2;i++){
+		a=str[i];
+		str[i]=str[strlen(str)-i-1];
+		str[strlen(str)-i-1]=a;
+	}
+	printf("%s",str);
+}
+int main(){
+	char str[20];
+	scanf("%s",str);
+	string_change(str);
+	return 0;
+}

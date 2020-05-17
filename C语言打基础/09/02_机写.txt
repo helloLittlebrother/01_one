@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define MAX(a,b) (a>b?a:b)
+#define MIN(a,b) (a<b?a:b)
+#define ABS(a) (a>0?a:-a)
+int main(){
+	float abs,min,max,a,b;
+	scanf("%f%f",&a,&b);
+	max=MAX(a,b);
+	min=MIN(a,b);
+	abs=ABS(a);
+	printf("%f\n",max);
+	printf("%f\n",min);
+	printf("%f\n",abs);
+	return 0;
+}

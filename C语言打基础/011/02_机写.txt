@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+char *hand_cls(char *a){
+	char *b;
+	b=a;
+	for(;*b!=32;b++);
+	for(;*b!='\O';b++)
+		*b=*(b+1);
+	return a;
+}
+int main(){
+	char a[20];
+	gets(a);
+	char *p;
+	p=hand_cls(a);
+	printf("%s\n",p);
+	return 0;
+}

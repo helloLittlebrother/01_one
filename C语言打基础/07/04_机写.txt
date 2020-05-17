@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	int ss=0,s=0,year,month,date,i,j,a[2][12]={31,28,31,30,31,30,31,31,30,31,30,31,31,29,31,30,31,30,31,31,30,31,30,31};
+	scanf("%d%d%d",&year,&month,&date);
+	for(j=0;j<month-1;j++){
+		if((year%4==0&&year%100!=0)||(year%400==0))
+			s=s+a[0][j];
+		else
+			s=s+a[1][j];
+	}
+	ss=s+date;
+	printf("%d\n",ss);
+	return 0;
+}

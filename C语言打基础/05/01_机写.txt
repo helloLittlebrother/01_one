@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+	int a=1,i;
+	for(i=1;!(a%3==2&&a%5==3&&a%7==4);i++){
+		a=i;
+	}
+	printf("%d\n",a);
+	return 0;
+}

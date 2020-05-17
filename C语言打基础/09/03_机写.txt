@@ -1,0 +1,17 @@
+#include<stdio.h>
+#define Leap_Year(year) (year%400==0||year%100!=0&&year%4==0)
+#define Isupper(a) (a>='A'&&a<='Z')
+int main(){
+	int year;
+	char a;
+	scanf("%d %c",&year,&a);
+	if(Leap_Year(year))
+		printf("是瑞年\n");
+	else
+		printf("不是瑞年\n");
+	if(Isupper(a))
+		printf("是大写字母\n");
+	else
+		printf("不是大写字母\n");
+	return 0;
+}

@@ -1,0 +1,42 @@
+#include<stdio.h>
+void shu(double over[],int num[],int score[2][3]){
+	int i,j;
+	printf("输入学号\n");
+	for(i=0;i<2;i++)
+		scanf("%d",&num[i]);
+	printf("英语+语文+数学\n");
+	for(i=0;i<2;i++){
+		over[i]=0;
+		for(j=0;j<3;j++){
+			scanf("$d",&score[i][j]);
+			over[i]+=score[i][j];
+		}
+		over[i]/3;
+	}
+}
+void pai(double over[],int num[],score[2][3]){
+	int i,j,k,t,s;
+	for(i=0;i<2;i++){
+		k=i;
+		for(j=i+1;j<2;j++){
+			if(over[j]>over[k])
+				k=j;
+			t=over[k];
+			over[k]=over[i];
+			over[i]=t;
+			s=num[k];
+			num[k]=num[i];
+			num[i]=s;
+		}
+	}
+	for(i=0;i<2;i++)
+		printf("%d %f,\n",num[i],over[i]);
+}
+int main(){
+	int num[2];
+	double over[2];
+	int score[2][3];
+	shu(over,num,score);
+	pai(over,num,score);
+	return 0;
+}

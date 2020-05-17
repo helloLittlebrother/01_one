@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+char *string_cut(char string[],char c){
+	int s=0,i;
+	char *b;
+	b=&string[0];
+	for(i=0;i<strlen(string);i++){
+		if(string[i]==c)
+			return &string[i];
+		else
+			s++;
+	}
+	if(s==strlen(string))
+		return n;
+}
+int main(){
+	char string[10];
+	char *b;
+	char c;
+	scanf("%s",string);
+	scanf("%s",&c);
+	b=string_cut(string,c);
+	printf("%d\n",b);
+	return 0;
+}

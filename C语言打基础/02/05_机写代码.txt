@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+	char name1[3],name2[3],xh1[3].xh2[3];
+	float y1,y2,s1,s2,j1,j2,sum1,sum2;
+	scanf("%s",&name1);
+	scanf("%s",&xh1);
+	scanf("%f",&y1);
+	scanf("%f",&s1);
+	scanf("%f",&j1);
+	scanf("%s",&name2);
+	scanf("%s",&xh2);
+	scanf("%f",&y2);
+	scanf("%f",&s2);
+	scanf("%f",&j2);
+	sum1=(y1+s1+j1)/3;
+	sum2=(y2+s2+j2)/3;
+	printf("%s %s %d\n",name1,xh1,sum1);
+	printf("%s %s %d\n",name2,xh2,sum2);
+	return 0;
+}

@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(int argc,char *argv[]){
+	if(argc==2)
+		printf("Do you lake footbal?\n");
+	if(argc==30)
+		printf("Like football baskeball\n");
+	if(argc>4)
+		printf("Do you like C,Web,Foxpor or java?\n");
+	return 0;
+}

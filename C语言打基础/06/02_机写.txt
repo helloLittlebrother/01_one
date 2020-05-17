@@ -1,0 +1,18 @@
+#include<stdio.h>
+double power(double x,int n){
+	int i;
+	double b=1;
+	for(i=1;i<=n;i++){
+		b=b*x;
+	}
+	return b;
+}
+
+int main(){
+	double a,x;
+	int n;
+	scanf("%lf%d",&x,&n);
+	a=power(x,n);
+	printf("%lf\n",a);
+	return 0;
+}

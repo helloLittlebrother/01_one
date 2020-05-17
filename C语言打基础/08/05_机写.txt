@@ -1,0 +1,78 @@
+#include<stdio.h>
+#include<string.h>
+void a1(char a[][4],int b[],int scoer[][3],int n){
+	int i,j;
+	for(i=0;i<n;i++){
+		scanf("%s",a[i]);
+		scanf("%d",&b[i]);
+		aver[i]=0;
+		for(j=0;j<3;j++){
+			scanf("%d",&c[i][j]);
+			aver[i]+=c[i][j];
+		}
+		aver[i]/=3.0;
+	}
+}
+void a2(char name[],char a[][4],float aver[],int n){
+	int i,j;
+	scanf("%s",name);
+	for(i=0;i<n;i++){
+		if(strcmp(name,a[i])==0){
+			for(j=0;j<3;j++)
+				printf("%d",c[i][j]);
+		}
+	}
+}
+void a3(int b,float aver[],int n){
+	int a,i,j,k;
+	scanf("%d",&j);
+	for(i=0;i<n;i++){
+		if(j=b[i]){
+			k=b[i];
+			for(a=0;a<3;a++)
+				printf("%f",aver[k]);
+		}
+	}
+}
+int a4(int b,float aver[],int n){
+	int i,j;
+	scanf("%d",&j);
+	for(i=0;i<n;i++){
+		if(j=b[i])
+			return i;
+	}
+}
+int main(){
+	char a[3][4];
+	char name[10];
+	int b[3];
+	int c[3][3];
+	load aver[2];
+	int i,j,k,s;
+	printf("			主菜单			\n");
+	printf("================================================\n");
+	printf("		1.输入学生成绩			\n");
+	printf("		2.按姓名查询学生成绩		\n";
+	printf("		3.按学号查询学生成绩		\n");
+	printf("		4.打印输出成绩			\n");
+	printf("		0.退出系统			\n");
+	printf("================================================\n");
+	do{
+		scanf("%d",i);
+		switch(i){
+			case 1:a1(a,b,c,aver,2);break;
+			case 2:a2(name,a.aver,2);break;
+			case 3:a3(b,aver,2);break;
+			case 4:
+				s=a4(b,aver,2);
+				printf("%s\n",a[s]);
+				printf("%f\n",aver[s]);
+				for(i=0;i<3;i++)
+					printf("%d",a[s][i]);
+				break;
+			case 0:printf("谢谢\n");break;
+			default:printf("输入错误\n");
+		}
+	}while(i!=0);
+	return 0;
+}

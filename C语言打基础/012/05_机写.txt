@@ -1,0 +1,4 @@
+#include<stdio.h>
+int main(){
+	enum aa{100,50,20,10,5,2,1,0.5,0.1}
+}
