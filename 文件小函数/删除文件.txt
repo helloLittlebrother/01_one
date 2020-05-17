@@ -1,0 +1,5 @@
+int dele(char fileName)
+{
+int remove(fileName);
+return 1;
+}

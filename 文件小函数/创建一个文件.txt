@@ -1,0 +1,7 @@
+#include<stdio.h>
+FilE *setFile(char fileName)
+{
+	FILE *setFileName=fopen(fileName,"w");
+	return setFileName;
+
+}

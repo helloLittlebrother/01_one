@@ -1,0 +1,15 @@
+#include <io.h>
+#include <direct.h>
+int setFileFolder(char fileName[])
+{
+    //文件夹名称
+    //char folderName[] = "RunData";
+
+    // 判断要创建的文件夹不存在则创建文件夹
+    if (_access(folderName, 0) == -1)
+    {
+        _mkdir(folderName);
+	return 1;
+    }
+	return 0;
+}

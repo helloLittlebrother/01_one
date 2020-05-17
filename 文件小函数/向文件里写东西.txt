@@ -1,0 +1,12 @@
+#include <stdio.h>
+int setFile01(FILE *setFileName,char content )
+{
+	if(setFileName==NULL)
+	{
+		return 0;
+	}
+	
+	fprintf(fpWrite,"%s ",content);
+	fclose(fpWrite);
+	return 1;
+}

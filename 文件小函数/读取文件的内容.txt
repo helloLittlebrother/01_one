@@ -1,0 +1,16 @@
+//读出指定文件名里的内容，并输出出来
+#include <stdio.h>
+int getFile01(char fileName)
+{
+	char content;
+	FILE *fpRead=fopen(fileName,"r");
+	if(fpRead==NULL)
+	{
+		return 0;
+	}
+	
+	fscanf(fpRead,"%s",&content);
+	printf("%s ",content);
+	
+	return 1;
+}
