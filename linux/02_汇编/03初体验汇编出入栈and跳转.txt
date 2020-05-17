@@ -1,0 +1,29 @@
+#include<stdio.h>
+PointInit:
+    pushl    %ebp
+    movl    %esp, %ebp
+    movl    8(%ebp), %eax    
+    movl    12(%ebp), %edx 
+    movl    %edx, (%eax)      
+    movl    8(%ebp), %eax
+    movl    16(%ebp), %edx  
+    movl    %edx, 4(%eax)   
+    popl    %ebp
+    ret
+
+main:
+    pushl    %ebp
+    movl    %esp, %ebp
+    subl    $28, %esp
+    movl    $10, -8(%ebp) 
+    movl    $20, -4(%ebp)  y=20
+    movl    -4(%ebp), %eax
+    movl    %eax, 8(%esp)
+    movl    -8(%ebp), %eax
+    movl    %eax, 4(%esp)
+    leal    -16(%ebp), %eax  
+    movl    %eax, (%esp)
+    call    PointInit
+    movl    $0, %eax
+    leave
+    ret
