@@ -1,0 +1,1 @@
+今天的任务是学习 gcc的辅助工具集 binutils，主要学习 Objdump、objcopy和nm，记笔记做练习，笔记拍照，练习截图发群。
